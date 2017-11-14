@@ -1,0 +1,18 @@
+{
+  "name": "item",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "grunt eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "husky": "^0.14.3",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
