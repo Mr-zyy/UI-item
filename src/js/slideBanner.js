@@ -11,7 +11,6 @@ function Slide(dBox,imgs,type){
 	this.spot = null;
 	this.spots = null;
 	this.sum = 2;
-	this.spotIndex=0;
 	this.width = parseFloat(this.getStyle(this.stage,'width'));
 	this.init();
 }	
@@ -24,7 +23,7 @@ Slide.prototype={
 			this.change(this.changePosition.bind(this));
 			var _this=this;
 			window.onfocus = function(){
-				// alert('focus')
+				console.log('focus');
 				_this.change(_this.changePosition.bind(_this));
 			}
 			window.onblur = function(){
@@ -44,7 +43,6 @@ Slide.prototype={
 		}
 		this.mouseover();
 		this.mouseout();
-//		this.onresize();
 	},
 	createImg:function(){
 		var frag = document.createDocumentFragment();
@@ -70,32 +68,15 @@ Slide.prototype={
 		}
 		this.stage.appendChild(frag);
 	},
-//	onresize:function(){
-//		var _this = this;
-//		window.onresize=function(){
-//			var spots = document.querySelectorAll(".spot");
-//			var length=spots.length;
-//			for(var i=0;i<length;length++){
-////				let j =i;
-//				spots[i].style.left="parseFloat(_this.getStyle('_this.stage,'width'))*0.55"+i*(-30)+"px";
-//			}
-//			
-//		}
-//	},
 	change:function(fn){
-		console.log(1);
 		this.imgBox = document.querySelectorAll('.imgBox');
 		this.spots = document.querySelectorAll(".spot");
-		this.timer=setInterval(fn,1000);
+		this.timer=setInterval(fn,3000);
 	},
 	changePosition:function(){
 			var _this = this;
-			// console.log(this.spotIndex)
-			var prev = (this.spotIndex+1)===this.len?0:(this.spotIndex+1);
-			// console.log(prev);
-			// console.log(this.spots);
-			this.spots[prev].className="spot";
-			_this.spots[_this.spotIndex].className="spot red";
+			var prev =(this.index+1===this.len)?0:(this.index===this.len)?1:(this.index+1);
+			var now =this.index===this.len?0:this.index;
 
 			_this.animate(_this.imgBox[_this.index-1],{
 				mul:{
@@ -103,7 +84,8 @@ Slide.prototype={
 				}
 				},function(){	
 					_this.imgBox[_this.index-1].style.zIndex=_this.sum;
-
+					_this.spots[prev].className="spot";
+					_this.spots[now].className="spot red";
 					_this.sum++;
 					_this.animate(_this.imgBox[_this.index-1],{
 						mul:{
@@ -113,15 +95,10 @@ Slide.prototype={
 
 				_this.index--;
 				if(_this.index===0){
-					// console.log(_this.index)
 					_this.index=_this.len;
 				}
 				
 			})
-			this.spotIndex--;
-			if(this.spotIndex===-1){
-				this.spotIndex=_this.len-1;
-			}
 
 	},
 	changeOpacity:function(){
