@@ -1,0 +1,122 @@
+.banner1{
+	background-color:rgb(18,18,18);
+	width: 100%;
+	height:500px;
+}
+.banner1 img{
+	width: inherit;
+	height: inherit;
+}
+.main{
+	margin:52px auto;
+	width: 1105px;
+}
+.main h2{
+	text-align: center;
+	font-size: 42px;
+	color: rgb(255,146,0);
+	font-family: 'hanyi';
+}
+.part1{
+	margin-top: 96px;
+}
+.part1-p{
+	padding-left: 88px;
+}
+.part1 li,.part2 li,.part3 li,.part5 li{
+	float: left;
+	margin-left: 50px;
+}
+.part1 p,.part2 p,.part3 p,.part4 p,.part5 p{
+	font:20px 'hanyi';
+	line-height: 35px;
+	color: rgb(60,60,60);
+}
+.line1,.line2,.line3,.line4{
+	position: relative;
+}
+.line1{
+	top: 128px;
+}
+.part2-p{
+	padding: 110px 88px 0;
+}
+.line2{
+	bottom: 22px;
+	left: 230px;
+}
+.line3{
+	top:170px;
+	left: -80px;
+}
+.part3-p{
+	padding-top:86px ;
+}
+.line4{
+	left: 45px;
+	top: 220px;
+}
+.part4,.part5{
+	margin-top: 70px;
+}
+.part4 li{
+	float: left;
+}
+.part4-p{
+	position:relative;
+	left: 120px;
+	top: 55px;
+}
+.part5-p{
+	padding: 50px 0 0 238px;
+}
+.more h2{
+	margin-top: 95px;
+	margin-bottom: 65px;
+}
+#tab h3{
+	float: right;
+	padding-left:25px;
+	font-size: 20px;
+	color: rgb(255,146,0);
+	cursor: pointer;
+}
+#tab span{
+	height: 3px;
+	width: 80px;
+	background-color: rgb(200,200,200);
+	margin-top: 5px;
+}
+
+#tab div{
+	clear: both;
+	display: none;
+}
+.dish-list,.desert-list,.drink-list{
+	padding-top: 35px;
+	
+}
+.dish-list li,.drink-list li,.desert-list li{
+	width: 358px;
+	height: 460px;
+	float: left;
+	background-color: rgb(200,200,200);
+}
+.l1,.l2,.l4,.l5{
+	margin:0 14px 32px 0;
+}
+/*.l3,.l6{
+	margin-top: 10px;
+}*/
+.dish-list img,.drink-list img,.desert-list img{
+	margin: 15px ;
+	width: 326px;
+	height: 392px;
+}
+.dish-list p ,.drink-list p,.desert-list p{
+	font-size: 20px;
+	text-align: center;
+	color: #000;
+	line-height: 15px;
+}
+

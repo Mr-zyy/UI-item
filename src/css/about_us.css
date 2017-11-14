@@ -1,0 +1,52 @@
+@font-face {
+	font-family:'hanyi';
+	src: url('../fonts/zhongyuan.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+.banner3{
+	background-color: rgb(242,234,232);
+	width: 100%;
+	height: 500px;
+}
+.canpain{
+	margin: 80px 150px;
+}
+.canpain-logo>img{
+	margin: 40px 125px;
+	height: 420px;
+}
+.introduce{
+	margin: 80px auto;
+	height: 600px;
+	background-color: rgb(250,250,250);
+}
+.introduce li,.culture li{
+	float: left;
+	width: 500px;
+}
+
+.detail1,.detail2{
+	padding:122px 90px;
+	font-size:20px;
+	font-family: "微软雅黑";
+	color: rgb(41,41,41);
+}
+.detail1>h5,.detail2>h5,.idea>h5{
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	font-family: 'hanyi',arial;
+	margin-bottom: 30px;
+}
+.idea li{
+	float:left;
+}
+.idea img{
+	margin-left: 30px;
+}
+.idea>h5{
+	font-family: 'hanyi',arial;
+	color: rgb(41,41,41);
+	margin: 90px  0 60px  ;
+}
