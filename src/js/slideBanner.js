@@ -52,15 +52,15 @@ Slide.prototype={
 		for(var i = 0;i<this.len;i++){
 			this.box = document.createElement('div')
 			this.box.className='imgBox'
-			this.box.style="width:inherit;height:inherit;position:absolute;left:0;top:0;"
+			// this.box.style="width:inherit;height:inherit;position:absolute;left:0;top:0;"
 			this.box.style.cssText="width:inherit;height:inherit;position:absolute;left:0;top:0;"
 			this.img = document.createElement('img')
 			this.img.src=imgs[i];
-			this.img.style="width:inherit;height:inherit;"
+			// this.img.style="width:inherit;height:inherit;"
 			this.img.style.cssText="width:inherit;height:inherit;"
 			this.box.appendChild(this.img);
 			this.spot = document.createElement('div');
-			this.spot.style = "width:10px;height:10px;border:1px solid #fff;border-radius:50%;z-index:9999;position:absolute;top:85%;left:"+(this.width*0.55+i*(-30))+"px";
+			// this.spot.style = "width:10px;height:10px;border:1px solid #fff;border-radius:50%;z-index:9999;position:absolute;top:85%;left:"+(this.width*0.55+i*(-30))+"px";
 			this.spot.style.cssText = "width:10px;height:10px;border:1px solid #fff;border-radius:50%;z-index:9999;position:absolute;top:85%;left:"+(this.width*0.55+i*(-30))+"px";
 			this.spot.className = "spot";
 			frag.appendChild(this.spot);

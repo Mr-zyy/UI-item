@@ -33,19 +33,24 @@ Banner.prototype = {
 		var css=null;
 		if(code.indexOf('.css')!=-1){
 			css=document.createElement('link');
-			css.type="text/css"
-			css.rel="stylesheet"
-			css.href=code
+			css.type="text/css";
+			css.rel="stylesheet";
+			css.href=code;
+			if(navigator.appName === "Microsoft Internet Explorer" ){
+				var box = document.querySelector(".box");
+				box.style.perspective = "500px";
+			}
+
 		}else{
 			css=document.createElement('style')
 			css.type="text/css"
 			try{
-				css.appendChild(document.createTextNode(code))
+				css.appendChild(document.createTextNode(code));
 			}catch(ex){
-				css.stylesheet.text=code
+				css.stylesheet.text=code;
 			}
 		}
-		var head=document.getElementsByTagName('head')[0]
-		head.appendChild(css)
+		var head=document.getElementsByTagName('head')[0];
+		head.appendChild(css);
 	}
 }
