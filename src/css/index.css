@@ -27,14 +27,21 @@ html {overflow-y: scroll;}
 .header{
 	height:80px;
 	width:100%;
-	/*border: 1px solid red;*/
-	background: url(../imgs/logo1.png) 150px 0 no-repeat;
+	min-width:1200px;
+}
+.logo{
+	text-indent: -1000px;
+	width:170px;
+	height:80px;
+	background: url(../imgs/logo1.png) no-repeat;
+	float: left;
+	margin-left:150px;
 }
 .nav {
-	position: absolute;
 	width:630px;
-	left:450px;
 	height:80px;
+	float:right;
+	margin-right: 200px;
 }
 .nav li{
 	width: 82px;
